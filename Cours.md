@@ -24,7 +24,491 @@ TSSR-Knowledge-Base/
 │
 ├── 06_Active_Directory/
 │
-├── 07_Virtualisation_VMware/
+├── # 🖥️ Chapitre 07 - Virtualisation VMware
+
+> La virtualisation permet d'exécuter plusieurs systèmes d'exploitation sur une même machine physique.
+>
+> C'est une compétence essentielle pour un Technicien Supérieur Systèmes et Réseaux (TSSR), car elle permet de créer des laboratoires, tester des configurations et simuler des infrastructures professionnelles.
+
+---
+
+# 🎯 Objectifs du chapitre
+
+À la fin de ce chapitre, tu devras être capable de :
+
+- Comprendre le principe de la virtualisation
+- Installer VMware Workstation
+- Créer une machine virtuelle
+- Configurer les réseaux VMware
+- Utiliser les snapshots
+- Construire un laboratoire TSSR complet
+- Dépanner les problèmes courants
+
+---
+
+# 📚 1. Qu'est-ce que la virtualisation ?
+
+La virtualisation consiste à créer des ordinateurs virtuels à l'intérieur d'un ordinateur physique.
+
+Un seul PC peut ainsi héberger :
+
+- Windows 11
+- Windows Server
+- Debian
+- Ubuntu
+- Kali Linux
+
+en même temps.
+
+---
+
+## Exemple
+
+```text
+PC Physique
+│
+├── VMware Workstation
+│
+├── Windows Server
+├── Windows 11
+├── Debian 13
+└── Kali Linux
+```
+
+---
+
+# 📚 2. Hyperviseur
+
+Un hyperviseur est un logiciel permettant de créer et gérer des machines virtuelles.
+
+## Exemples
+
+- VMware Workstation
+- VirtualBox
+- Hyper-V
+- VMware ESXi
+- Proxmox
+
+---
+
+# 📚 3. Pourquoi utiliser VMware ?
+
+## Avantages
+
+✅ Tester sans risque
+
+✅ Faire des sauvegardes rapides
+
+✅ Créer des laboratoires
+
+✅ Simuler une entreprise
+
+✅ Apprendre Active Directory
+
+✅ Réaliser des TP réseau
+
+✅ Installer plusieurs systèmes
+
+---
+
+## Inconvénients
+
+❌ Consomme beaucoup de RAM
+
+❌ Consomme du stockage
+
+❌ Utilise le processeur
+
+---
+
+# 📚 4. Machine Virtuelle (VM)
+
+Une machine virtuelle est un ordinateur simulé.
+
+Elle possède :
+
+- Processeur virtuel
+- Mémoire virtuelle
+- Disque virtuel
+- Carte réseau virtuelle
+
+---
+
+## Exemple
+
+```text
+VM : DC01
+
+CPU : 2 vCPU
+RAM : 4 Go
+Disque : 60 Go
+OS : Windows Server
+```
+
+---
+
+# 📚 5. Ressources d'une VM
+
+## CPU
+
+Nombre de cœurs attribués.
+
+Exemple :
+
+```text
+1 cœur
+2 cœurs
+4 cœurs
+```
+
+---
+
+## RAM
+
+Mémoire disponible pour la VM.
+
+Exemple :
+
+```text
+2 Go
+4 Go
+8 Go
+```
+
+---
+
+## Stockage
+
+Espace disque de la machine virtuelle.
+
+Exemple :
+
+```text
+40 Go
+60 Go
+100 Go
+```
+
+---
+
+# 📚 6. Réseaux VMware
+
+La partie réseau est l'une des plus importantes pour le TSSR.
+
+---
+
+## Bridged
+
+La VM apparaît directement sur le réseau local.
+
+```text
+BOX
+│
+├── PC
+├── Téléphone
+└── VM
+```
+
+La VM reçoit une adresse IP du réseau.
+
+Exemple :
+
+```text
+192.168.1.50
+```
+
+---
+
+## NAT
+
+La VM utilise la connexion Internet du PC.
+
+```text
+BOX
+   │
+PC Hôte
+   │
+ VM
+```
+
+La VM peut sortir sur Internet.
+
+Elle est souvent isolée du réseau local.
+
+---
+
+## Host-Only
+
+Communication uniquement entre :
+
+- le PC hôte
+- les machines virtuelles
+
+Pas d'accès Internet.
+
+```text
+PC
+ │
+ ├── VM1
+ ├── VM2
+ └── VM3
+```
+
+---
+
+# 📚 7. Snapshots
+
+Un snapshot est une photographie de la VM à un instant donné.
+
+---
+
+## Exemple
+
+```text
+Windows Server propre
+      │
+ Snapshot
+      │
+Installation AD
+      │
+Erreur
+      │
+Retour Snapshot
+```
+
+---
+
+## Avantages
+
+- Gain de temps
+- Retour arrière rapide
+- Sécurité
+
+---
+
+# 📚 8. VMware Tools
+
+VMware Tools améliore :
+
+- Les performances
+- La souris
+- La vidéo
+- Le copier/coller
+- Le partage de fichiers
+
+---
+
+## Installation
+
+Dans VMware :
+
+```text
+VM
+└── Install VMware Tools
+```
+
+---
+
+# 📚 9. Laboratoire TSSR conseillé
+
+## Infrastructure
+
+```text
+VMnet1 (Host-Only)
+
+├── DC01
+│   ├── AD
+│   ├── DNS
+│   └── DHCP
+│
+├── SRV01
+│
+├── WIN11-01
+│
+└── DEBIAN01
+```
+
+---
+
+## Objectifs
+
+Apprendre :
+
+- Active Directory
+- DNS
+- DHCP
+- Linux
+- Réseau
+- Scripts
+
+---
+
+# 📚 10. Bonnes pratiques
+
+## Nommer les VM
+
+Utiliser une convention.
+
+Exemple :
+
+```text
+DC01
+SRV01
+WIN11-01
+DEBIAN01
+CLIENT01
+```
+
+---
+
+## Organiser les snapshots
+
+Exemple :
+
+```text
+Installation
+Configuration réseau
+DHCP
+AD
+GPO
+```
+
+---
+
+## Sauvegarder les VM
+
+Stocker les VM sur :
+
+- SSD secondaire
+- NAS
+- Disque externe
+
+---
+
+# 📚 11. Problèmes fréquents
+
+## Pas d'Internet
+
+Vérifier :
+
+```text
+NAT
+Passerelle
+DNS
+```
+
+---
+
+## Pas de communication entre VM
+
+Vérifier :
+
+```text
+Adresse IP
+Masque
+Pare-feu
+VMnet
+```
+
+---
+
+## VM lente
+
+Vérifier :
+
+```text
+RAM suffisante
+SSD
+Nombre de VM ouvertes
+```
+
+---
+
+# 📚 12. Commandes utiles
+
+## Windows
+
+Afficher la configuration réseau :
+
+```powershell
+ipconfig /all
+```
+
+Tester la connexion :
+
+```powershell
+ping 8.8.8.8
+```
+
+Résoudre les noms DNS :
+
+```powershell
+nslookup google.fr
+```
+
+---
+
+## Linux
+
+Afficher les interfaces :
+
+```bash
+ip addr
+```
+
+Tester une connexion :
+
+```bash
+ping 8.8.8.8
+```
+
+Afficher les routes :
+
+```bash
+ip route
+```
+
+---
+
+# 📝 Résumé
+
+## À retenir
+
+✅ VMware permet de créer des ordinateurs virtuels.
+
+✅ Une VM possède son propre système d'exploitation.
+
+✅ Les modes réseau principaux sont :
+
+- Bridged
+- NAT
+- Host-Only
+
+✅ Les snapshots permettent un retour arrière rapide.
+
+✅ VMware est l'outil principal pour construire un laboratoire TSSR.
+
+✅ Un bon labo VMware permet de pratiquer :
+
+- Windows Server
+- Active Directory
+- Réseau
+- Linux
+- Docker
+- Cybersécurité
+
+---
+
+# 🎓 Questions de révision
+
+1. Qu'est-ce qu'une machine virtuelle ?
+2. Quelle différence entre NAT et Bridged ?
+3. À quoi sert un snapshot ?
+4. Qu'est-ce qu'un hyperviseur ?
+5. Pourquoi installer VMware Tools ?
+6. Quel mode réseau utiliser pour un laboratoire isolé ?
+7. Quel mode réseau permet à une VM d'obtenir une IP du réseau local ?
+8. Pourquoi la virtualisation est-elle importante pour un TSSR ?
 │
 ├── 08_Stockage/
 │
