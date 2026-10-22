@@ -29,7 +29,7 @@ Bits, Trame, Paquet, Segment, Data
 ### IEEE (Institute of Electrical and Electronics Engineers) *Institut des Ingénieurs en Électricité et en Électronique* 
 802 : norme reseau 
 802.3 (Ethernet, RG45, 8P8C) LAN / MAN / WAN  
-802.11 (WiFi) SOHO  
+802.11 (WiFi) SOHO (Small Office Home Office)  
 
 # Modèle OSI - Moyen mnémotechnique
 
@@ -118,13 +118,13 @@ Basse couche
 "T'es sûr d'être bien branché ?"
 "qu'il y a t'il d'écris sur le routeur?" "Wifi tel ?"  
 
-Couche 8 : Utilisateur 
-Couche 7 : AH (Application Header) 
-Couche 6 : PH + AH (Presentation Header)
-Couche 5 : SH + PH + AH (Systeme Header)
-Couche 4 : TH + SH + PH + AH (Transport Header)
-Couche 3 : NH + TH + SH + PH + AH (Network Header
-Couche 2 : DH + NH + TH + SH + PH + AH (Datalink Header)
-Couche 1 : Bits
+Couche 8 : Utilisateur  
+Couche 7 : AH (Application Header)  
+Couche 6 : PH + AH (Presentation Header)  
+Couche 5 : SH + PH + AH (Systeme Header)  
+Couche 4 : TH + SH + PH + AH (Transport Header)  
+Couche 3 : NH + TH + SH + PH + AH (Network Header)  
+Couche 2 : DH + NH + TH + SH + PH + AH (Datalink Header)  
+Couche 1 : Bits  
 
-
+Passerelle : Point de sortie d'un réseau 
