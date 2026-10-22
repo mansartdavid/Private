@@ -1,1 +1,7 @@
-Passerelle : Point de sortie d'un réseau
+Passerelle : Point de sortie d'un réseau  
+  
+| Bridge = Comme un vrai PC sur le réseau Connexion   
+  
+|🏠 Host-Only = Maison fermée (réseau isolé) Connexion avec l'hôte uniquement  
+  
+|🌍 NAT = Internet sans être visible via l'hôte  
