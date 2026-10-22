@@ -10,9 +10,9 @@ Lors de la réception, le processus inverse s'appelle la **désencapsulation** (
 | :--- | :--- | :--- | :--- |
 | **7. Application**<br>**6. Présentation**<br>**5. Session** | **Données** (Data) | La donnée brute est générée par le logiciel, formatée et préparée. | Un message de chat ou une requête HTTP. |
 | **4. Transport** | **Segment** (TCP) ou **Datagramme** (UDP) | Ajout d'une en-tête de transport contenant les **ports source et destination** (ex: port 443 pour le HTTPS) pour identifier l'application. | Découpage des grosses données en morceaux. |
-| **3. Réseau** | **Paquet** (Packet) | Ajout d'une en-tête réseau contenant les **adresses IP source et destination** pour permettre le routage sur Internet. | Le segment devient un paquet IP. |
-| **2. Liaison** | **Trame** (Frame) | Ajout d'une en-tête avec les **adresses MAC source et destination** (matériel local) + un pied de page (FCS) pour vérifier les erreurs. | Le paquet devient une trame Ethernet ou Wi-Fi. |
-| **1. Physique** | **Bits** | La trame est convertie en une suite de **0 et de 1** (impulsions électriques, lumineuses ou ondes radio). | Envoi des signaux sur le câble ou dans l'air. |
+| **3. Réseau** | **Paquet** (Packet) Routeurs | Ajout d'une en-tête réseau contenant les **adresses IP source et destination** pour permettre le routage sur Internet. | Le segment devient un paquet IP. |
+| **2. Liaison de donnée** | **Trame** (Frame) Switch| Ajout d'une en-tête avec les **adresses MAC source et destination** (matériel local) + un pied de page (FCS) pour vérifier les erreurs. | Le paquet devient une trame Ethernet ou Wi-Fi. |
+| **1. Physique** | **Bits** Cables | La trame est convertie en une suite de **0 et de 1** (impulsions électriques, lumineuses ou ondes radio). | Envoi des signaux sur le câble ou dans l'air. |
 
 ## L'analogie de la lettre postale
 Pour mieux comprendre, imagine que tu écris une lettre :
@@ -20,6 +20,10 @@ Pour mieux comprendre, imagine que tu écris une lettre :
 2. **Transport :** Tu ajoutes une mention pour savoir à quel service de l'entreprise elle s'adresse (ex: "Ressources Humaines").
 3. **Réseau :** Tu glisses le tout dans une enveloppe avec l'adresse postale complète (ton adresse et celle du destinataire).
 4. **Liaison :** La poste locale met ta lettre dans un sac postal spécifique pour le prochain centre de tri.
+
+### IEEE  
+802.3 (Ethernet, RG45, 8P8C)  
+802.11 (WiFi)
 
 # Modèle OSI - Moyen mnémotechnique
 
