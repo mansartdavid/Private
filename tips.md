@@ -66,10 +66,10 @@ A → Application
 ```
 ### TCP/IP 
 
-Couche 1 = Accès au réseau (OSI 1+2) 
-Couche 2 = Internet (OSI 3)
-Couche 3 = Transport (OSI 4)
-Couche 4 = Application (OSI 5+6+7)
+Couche 1 = Accès au réseau (OSI 1+2)  
+Couche 2 = Internet (OSI 3)  
+Couche 3 = Transport (OSI 4)  
+Couche 4 = Application (OSI 5+6+7)  
 
 ## *Avec internet tout arrive*
 ---
