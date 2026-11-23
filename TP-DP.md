@@ -207,7 +207,7 @@ dc-exchange.lab.local -> 192.168.174.250
 exchange.lab.local    -> 192.168.174.251
 glpi.lab.local        -> 192.168.174.134
 ```
-
+Préparer le DNS inversé
 ---
 
 # 9. Vérifications du domaine
