@@ -199,9 +199,7 @@ Valider puis laisser le serveur redémarrer.
 ---
 
 # 8. Installation du service DNS
-
-Le rôle DNS est installé automatiquement avec Active Directory.
-
+  
 Créer les enregistrements A suivants :
 
 ```text
