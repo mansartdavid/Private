@@ -16,9 +16,9 @@
 7. Installation d'Active Directory
 8. Installation du service DNS
 9. Vérifications du domaine
-10. Déploiement de la VM2 : Exchange Server SE
+10. Déploiement de la VM2 : Exchange 
 11. Préparation du serveur Exchange
-12. Installation d'Exchange Server SE
+12. Installation d'Exchange
 13. Création des utilisateurs et boîtes aux lettres
 14. Validation de la messagerie
 15. Déploiement de la VM3 : Debian 12
