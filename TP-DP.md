@@ -88,16 +88,16 @@ VMnet8 NAT
               |                                           |
               v                                           v
 
-     +----------------------+              +----------------------+
-     |       EXCHANGE       |              |         GLPI         |
-     | 192.168.174.251      |              | 192.168.174.134      |
-     | Windows Server 2025  |              | Debian 12            |
-     | Exchange Server SE   |              | Apache2              |
-     | OWA / ECP            |              | MariaDB              |
-     +----------------------+              | PHP                  |
+     +----------------------+               +---------------------+
+     |       EXCHANGE       |               |         GLPI        |
+     | 192.168.174.251      |               | 192.168.174.134     |
+     | Windows Server 2025  |               | Debian 12           |
+     | Exchange Server SE   |               | Apache2             |
+     | OWA / ECP            |               | MariaDB             |
+     +----------------------+               | PHP                 |
                                             | GLPI                |
                                             | GLPI Inventory      |
-                                            +----------------------+
+                                            +---------------------+
 ```
 
 ---
